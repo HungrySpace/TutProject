@@ -1,0 +1,34 @@
+﻿@model TutProject.Models.TakeСredit
+
+@{
+    ViewBag.Title = "Index";
+}
+@{ var cellCount = 0; }
+<table class="table">
+    <tr>
+    @foreach (string item in Model.get_head())
+    {
+        <th>
+            @item
+        </th>
+    }
+    </tr>
+    @foreach (string item in Model.get_body())
+    {
+        if (cellCount % 6 == 0)
+        {
+            @:<tr>
+            }
+            <td>
+                @item
+            </td>
+
+            cellCount++;
+
+            if (cellCount % 6 == 0)
+            {
+            @:</tr>
+        }
+    }
+</table>
+

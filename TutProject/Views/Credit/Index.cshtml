@@ -1,0 +1,38 @@
+﻿@model TutProject.Models.TakeСredit
+@{
+    ViewBag.Title = "Home Page";
+}
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="row">
+            @using (Html.BeginForm("Contact", "Credit", FormMethod.Post))
+            {
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+
+                    <h2>Расчитай свой кредит!</h2>
+                    <p>Калькулятор</p>
+                    <label for="Money">Сумма займа</label>
+                    <input type="number" min="1000" class="form-control" id="Money" name="Money" value="@Model.Money" />
+                    <label for="Time">Срок займа</label>
+                    <input type="number" min="1" class="form-control" id="Time" name="Time" value="@Model.Time" />
+                    <label for="Prc">Ставка</label>
+                    <input type="number" min="1" class="form-control" id="Prc" name="Prc" value="@Model.Prc" />
+                    <br>
+
+                    <button type="submit" class="btn btn-info" id="btn1" value="btn1" name="btn1">Рассчитать</button>
+
+                </div>
+                <div class="col-md-4">
+
+
+                </div>
+
+            }
+        </div>
+     </body>
+
+</html>
